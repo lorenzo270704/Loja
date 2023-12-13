@@ -10,7 +10,7 @@ package lojaderoupa.view;
  * @author 182200155
  */
 public class LojaRoupa extends javax.swing.JFrame {
-
+    // oi papai noel
     /**
      * Creates new form LojaRoupa
      */
@@ -119,8 +119,6 @@ public class LojaRoupa extends javax.swing.JFrame {
         jButton7.setForeground(new java.awt.Color(51, 51, 255));
         jButton7.setText("Consultar");
 
-        jTextField8.setText("jTextField8");
-
         jTextField9.setText("jTextField9");
 
         jTextField10.setText("jTextField10");
@@ -131,11 +129,11 @@ public class LojaRoupa extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel17)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField8))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
