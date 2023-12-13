@@ -22,7 +22,7 @@ import lojaderoupa.model.Produto;
     
     
     
-
+//lo
     public int getIdPedido() {
         return idPedido;
     }
