@@ -6,6 +6,9 @@
 //joao
 package lojaderoupa.controller;
 
+import javax.swing.JFrame;
+import lojaderoupa.view.LojaRoupa;
+
 /**
  *
  * @author 182200155
@@ -17,6 +20,11 @@ public class LojaDeRoupa {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        LojaRoupa l = new LojaRoupa();
+        l.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        l.setSize(569, 589);
+        l.setVisible(true);
+
     }
     
 }
