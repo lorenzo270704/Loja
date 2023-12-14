@@ -16,9 +16,12 @@ public class PedDAO {
     
         public void Incluir(Pedido ped) {
         String sql =  "INSERT INTO Pedido (nomeCliente, CPF, endereco, produto, tamanho, ValorTotal) VALUES ( "
-                    + " '" + ped.getCliente()+   "' ,  "
+                    + " '" + ped.getCliente().getNomeCliente()+   "' ,  "
+                    + " '" + ped.getCliente().getCPF()+   "' ,  "
+                    + " '" + ped.getCliente().getEndereco()+   "' ,  "
                     + " '" + ped.getProduto()+   "' ,  "
-                    + " '" + ped.getValorTotal() +"'  ) ";
+                    + " '" + ped.getValorTot()+   "' ,  "
+                    + " '" + ped.getPagamento()+"'  ) ";
         System.out.println(sql);
         conexao.executar( sql );
         JOptionPane.showMessageDialog(null, "Registro incluido com sucesso!!!");  

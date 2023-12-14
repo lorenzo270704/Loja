@@ -357,6 +357,11 @@ public class LojaRoupa extends javax.swing.JFrame {
         jButton9.setText("Adicionar mais itens");
 
         jButton10.setText("Concluir a compra");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -543,6 +548,10 @@ public class LojaRoupa extends javax.swing.JFrame {
     private void jbAdicionarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAdicionarPedidoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbAdicionarPedidoActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+       
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
