@@ -7,8 +7,8 @@ package lojaderoupa.controller;
 
 /**
  *
- * @author 182200155
+ * @author 66211020764
  */
-public class ProdPedidoController {
+public class ProdController {
     
 }

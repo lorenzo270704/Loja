@@ -22,7 +22,7 @@ import lojaderoupa.model.Produto;
     private double valorTot;
     private String Pagamento;
     private ArrayList<Produto> produtos;
-    
+
     
 //lo
     public int getIdPedido() {

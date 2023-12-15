@@ -5,7 +5,7 @@
 package lojaderoupa.dao;
 
 import javax.swing.JOptionPane;
-import lojaderoupa.dao.conexao;
+import lojaderoupa.dao.Conexao;
 import lojaderoupa.model.Pedido;
 
 /**
@@ -23,7 +23,7 @@ public class PedDAO {
                     + " '" + ped.getValorTot()+   "' ,  "
                     + " '" + ped.getPagamento()+"'  ) ";
         System.out.println(sql);
-        conexao.executar( sql );
+        Conexao.executar( sql );
         JOptionPane.showMessageDialog(null, "Registro incluido com sucesso!!!");  
     }
    

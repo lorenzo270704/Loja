@@ -5,7 +5,7 @@
 package lojaderoupa.dao;
 
 import javax.swing.JOptionPane;
-import lojaderoupa.dao.conexao;
+import lojaderoupa.dao.Conexao;
 import lojaderoupa.model.Cliente;
 
 /**
@@ -20,7 +20,7 @@ public class CliDAO{
                     + " '" + cli.getCPF() +"' , "
                     + " '" + cli.getEndereco() +"'  ) ";
         System.out.println(sql);
-        conexao.executar( sql );
+        Conexao.executar( sql );
         JOptionPane.showMessageDialog(null, "Registro incluido com sucesso!!!");
     }
     
