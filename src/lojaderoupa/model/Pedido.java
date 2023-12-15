@@ -5,6 +5,7 @@
  */
 package lojaderoupa.model;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import lojaderoupa.dao.CliDAO;
 import lojaderoupa.dao.PedDAO;
@@ -89,6 +90,9 @@ import lojaderoupa.model.Produto;
        PedDAO pDAO = new PedDAO();
         pDAO.Incluir(ped);
     }
-
-  
+      
+   
+      
+      
+      
 }
