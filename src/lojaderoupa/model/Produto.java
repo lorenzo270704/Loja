@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import lojaderoupa.dao.Conexao;
 import lojaderoupa.dao.ProdDAO;
+import static lojaderoupa.model.Pedido.cliente;
 
 /**
  *
@@ -86,10 +87,10 @@ public class Produto {
       prDAO.Cadastrar(prod);
     }
     
- //   public void Produto Consultar(String nomeProd) {
- //       ProdDAO pDAO = new ProdDAO();
- //       return pDAO.Consultar(nomeProd);
- //   }
+    public Produto Consultar(String nomeProd) {
+     ProdDAO pDAO = new ProdDAO();
+      return pDAO.Consultar(nomeProd);
+   }
 
     public void Alterar(Produto prod) {
         ProdDAO prDAO = new ProdDAO();
@@ -114,9 +115,9 @@ public class Produto {
                     String elenco = rs.getString(5);
                     String diretor = rs.getString(6);
                     String duracao = rs.getString(7);
- //                   Filme fil = new Filme (titulo, genero, anoPubli, elenco, diretor, duracao);
-                    fil.setIdfilme(rs.getInt("idfilme") );
-                    lista.add( fil );
+ //                   Pedido ped = new Pedido(idPedido ,Cliente cliente, Produto produto, valorTot, pagamento);
+ //                   ped.setIdProduto(rs.getInt("idPedido"));
+ //                   lista.add( pedido );
                 }    
             }catch(Exception e){  
             }

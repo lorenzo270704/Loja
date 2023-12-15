@@ -27,7 +27,7 @@ public class ProdDAO {
         JOptionPane.showMessageDialog(null, "Produto incluido com sucesso!");  
     }
 
-    public void Consultar(String nomeProd) {
+    public Produto Consultar(String nomeProd) {
         Produto prod = null;
         String sql = "SELECT * FROM Produto WHERE nomeProd = '"+ nomeProd+"';";
        // System.out.println(sql);
@@ -53,7 +53,7 @@ public class ProdDAO {
                 System.out.println("==>" + e);
             }
         }
-//        return prod;
+        return prod;
     }
 
     public void Alterar(Produto prod) {

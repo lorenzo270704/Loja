@@ -59,4 +59,19 @@ public class Estoque {
        EstDAO eDAO = new EstDAO();
        eDAO.Cadastrar(est);
     }
+    
+    public Estoque Consultar(String nomeProd) {
+     EstDAO eDAO = new EstDAO();
+      return eDAO.Consultar(nomeProd);
+   }
+
+        public void Alterar(Estoque est) {
+        EstDAO eDAO = new EstDAO();
+        eDAO.Alterar(est);
+    }
+
+    public void Excluir(Estoque est) {
+        EstDAO eDAO = new EstDAO();
+        eDAO.Excluir(est);
+    }
 }
