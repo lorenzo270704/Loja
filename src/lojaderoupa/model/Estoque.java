@@ -5,6 +5,9 @@
  */
 package lojaderoupa.model;
 
+import lojaderoupa.dao.EstDAO;
+import lojaderoupa.dao.ProdDAO;
+
 /**
  *
  * @author 66211020764
@@ -51,5 +54,9 @@ public class Estoque {
         this.categoria = categoria;
         Produto p = new Produto();
         
+    }
+    public void Cadastrar(Estoque est) {
+       EstDAO eDAO = new EstDAO();
+       eDAO.Cadastrar(est);
     }
 }

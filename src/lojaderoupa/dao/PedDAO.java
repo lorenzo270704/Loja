@@ -5,7 +5,7 @@
 package lojaderoupa.dao;
 
 import javax.swing.JOptionPane;
-import lojaderoupa.dao.conexao;
+import lojaderoupa.dao.Conexao;
 import lojaderoupa.model.Pedido;
 
 /**
@@ -18,9 +18,9 @@ public class PedDAO {
         String sql =  "INSERT INTO Pedido (nomeCliente, CPF, endereco, produto, tamanho, ValorTotal) VALUES ( "
                     + " '" + ped.getCliente()+   "' ,  "
                     + " '" + ped.getProduto()+   "' ,  "
-                    + " '" + ped.getValorTotal() +"'  ) ";
+                    + " '" + ped.getValorTot() +"'  ) ";
         System.out.println(sql);
-        conexao.executar( sql );
+        Conexao.executar( sql );
         JOptionPane.showMessageDialog(null, "Registro incluido com sucesso!!!");  
     }
    

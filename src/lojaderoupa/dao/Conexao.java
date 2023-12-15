@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author 182200155
  */
-public class conexao {
+public class Conexao {
      
     private static final String URL = "jdbc:mysql://localhost:3306/loja";
     private static final String USER = "root";

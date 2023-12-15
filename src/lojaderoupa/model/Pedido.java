@@ -17,8 +17,8 @@ import lojaderoupa.model.Produto;
     private int idPedido;
     static Cliente cliente;
     static Produto produto;
-    private float valorTotal;
-    private String formaPagamento;
+    private double valorTot;
+    private String pagamento;
     
     
     
@@ -47,12 +47,12 @@ import lojaderoupa.model.Produto;
         this.produto = produto;
     }
 
-    public float getValorTotal() {
-        return valorTotal;
+    public double getValorTot() {
+        return valorTot;
     }
 
-    public void setValorTotal(float valorTotal) {
-        this.valorTotal = valorTotal;
+    public void setValorTot(double valorTot) {
+        this.valorTot = valorTot;
     }
     
     public Pedido(){
@@ -60,21 +60,19 @@ import lojaderoupa.model.Produto;
     }
     
    
-    public Pedido(Cliente cliente, Produto produto,float valorTotal ){
-        //this.cliente = cliente;
-        //this.produto = produto;
-        //Cliente cliente = new Cliente();
-        cliente.setNomeCliente(formaPagamento);
-        cliente.setCPF(formaPagamento);
-        
-        this.valorTotal = valorTotal;
+    public Pedido(Cliente cliente, Produto produto,double valorTot, String pagamento){
+        this.cliente = cliente;
+        this.produto = produto;
+        this.valorTot = valorTot;
+        this.pagamento = pagamento;
         
     }
-     public Pedido(int id,Cliente cliente, Produto produto,float valorTotal ){
+     public Pedido(int id,Cliente cliente, Produto produto,double valorTot ){
         this.idPedido = id;
         this.cliente = cliente;
         this.produto = produto;
-        this.valorTotal = valorTotal;
+        this.valorTot = valorTot;
+        this.pagamento = pagamento;
         
     }
       public void Incluir(Pedido ped) {
