@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//joao
+//exclusão de classes
 package lojaderoupa.controller;
 
 /**
