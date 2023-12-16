@@ -241,9 +241,10 @@ public class LojaRoupa extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
@@ -252,7 +253,9 @@ public class LojaRoupa extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbTamanhoProd, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbQuantidadeProd, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbTamanhoProd, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -267,18 +270,14 @@ public class LojaRoupa extends javax.swing.JFrame {
                                 .addComponent(txtValorUniProd, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbQuantidadeProd, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(264, 264, 264))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jBconsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jBapagar, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jBAdicionarPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 502, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -492,7 +491,7 @@ public class LojaRoupa extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Produto", "Tamanho", "Quantidade"
+                "Produto", "Tamanho", "Quantidade", "Valor unitário"
             }
         ));
         jScrollPane1.setViewportView(TabelaItens);
@@ -504,6 +503,11 @@ public class LojaRoupa extends javax.swing.JFrame {
         jBadicionarItens.setFont(new java.awt.Font("Source Code Pro Black", 1, 11)); // NOI18N
         jBadicionarItens.setForeground(new java.awt.Color(51, 51, 255));
         jBadicionarItens.setText("Adicionar mais itens");
+        jBadicionarItens.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBadicionarItensActionPerformed(evt);
+            }
+        });
 
         jBExcluirCompra.setBackground(new java.awt.Color(204, 204, 255));
         jBExcluirCompra.setFont(new java.awt.Font("Source Code Pro Black", 1, 11)); // NOI18N
@@ -568,7 +572,7 @@ public class LojaRoupa extends javax.swing.JFrame {
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(26, 26, 26)
                         .addComponent(jLabel20)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -648,6 +652,7 @@ public class LojaRoupa extends javax.swing.JFrame {
                 Coluna[0] = txtProdutoProd.getText();
                 Coluna[1] = cbTamanhoProd.getSelectedItem().toString();
                 Coluna[2] = cbQuantidadeProd.getSelectedItem().toString();
+                Coluna[3] = txtValorUniProd.getText();
             model.addRow(Coluna);
         jTabbedPane1.setSelectedIndex(3);
      
@@ -686,6 +691,10 @@ public class LojaRoupa extends javax.swing.JFrame {
     private void jBEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBEstoqueActionPerformed
        jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_jBEstoqueActionPerformed
+
+    private void jBadicionarItensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBadicionarItensActionPerformed
+       jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_jBadicionarItensActionPerformed
     
     /**
      * @param args the command line arguments
