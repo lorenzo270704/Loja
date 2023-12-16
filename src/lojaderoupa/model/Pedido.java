@@ -91,7 +91,10 @@ import lojaderoupa.model.Produto;
         pDAO.Incluir(ped);
     }
       
-   
+   public void CalculaSubtotal(){
+       double sb = 0;
+   }
+      
       
       
       
