@@ -97,7 +97,7 @@ public class Produto {
         prDAO.Alterar(prod);
     }
 
-    public void Excluir(Produto prod) {
+        public void Excluir(String nomeProd) {
         ProdDAO prDAO = new ProdDAO();
         prDAO.Excluir(nomeProd);
     }
@@ -125,7 +125,5 @@ public class Produto {
         return lista;
     }  
 
-
-    
     
 }
