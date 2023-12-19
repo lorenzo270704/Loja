@@ -437,7 +437,7 @@ public class LojaRoupa extends javax.swing.JFrame {
     }//GEN-LAST:event_jBapagarActionPerformed
 
     private void jBAdicionarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAdicionarPedidoActionPerformed
-  
+  // to tentando resolver um erro
      
     }//GEN-LAST:event_jBAdicionarPedidoActionPerformed
 
