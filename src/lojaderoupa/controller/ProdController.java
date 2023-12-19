@@ -5,6 +5,8 @@
  */
 package lojaderoupa.controller;
 
+import javax.swing.JOptionPane;
+import lojaderoupa.model.Categoria;
 import lojaderoupa.model.Produto;
 
 /**
@@ -19,23 +21,27 @@ public class ProdController {
             Produto prod = new Produto();
             prod.Cadastrar(prod);
         }
+       else {
+           JOptionPane.showMessageDialog(null, "Preencha os campos");
+       }
     }
 
-    public Produto Excluir(String nomeProd) {
-        Produto prod = new Produto();
-        prod.Excluir(nomeProd);
-    }
-//Ver porque parametros não
-    public void Alterar(String nomeProd, String TamanhoProd, String valorUnit, String Categoria) {
-         if(!nomeProd.equals("")&&!TamanhoProd.equals("")&&!valorUnit.equals("")&&!Categoria.equals(""))
-        {
-//            Produto prod = new Produto(NomeProd, TamanhoProd, valorUnit, Categoria);
-//            prod.Alterar(prod);
-        }
-    }
-
-    public void Consultar(String nomeProd) {
+    public Produto Consultar(String nomeProd) {
        Produto prod = new Produto();
        return prod.Consultar(nomeProd);
     }
+
+    public void Excluir(String nomeProd) {
+        Produto prod = new Produto();
+        prod.Excluir(nomeProd);
+    }
+//Ver com sor, se 'categoria' deve ser mencionada assim ou não
+    public void Alterar(String nomeProd, String TamanhoProd, Double valorUnit, Categoria categoria) {
+      if(!nomeProd.equals("")&&!TamanhoProd.equals("")&&!valorUnit.equals("")&&!categoria.equals(""))
+        {
+           Produto prod = new Produto(nomeProd, TamanhoProd, valorUnit,categoria);
+           prod.Alterar(prod);
+        }
+    }
+     
 }

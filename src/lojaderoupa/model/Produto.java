@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import lojaderoupa.dao.Conexao;
 import lojaderoupa.dao.ProdDAO;
-import static lojaderoupa.model.Pedido.cliente;
+
 
 /**
  *
@@ -20,7 +20,6 @@ public class Produto {
     private String TamanhoProd;
     private double valorUnit;
     private Categoria Categoria;
-    private ArrayList<Pedido> pedido;
 
 
     public int getIdProduto() {
@@ -83,8 +82,8 @@ public class Produto {
     }
     
     public void Cadastrar(Produto prod) {
-     ProdDAO prDAO = new ProdDAO();
-      prDAO.Cadastrar(prod);
+     ProdDAO pDAO = new ProdDAO();
+      pDAO.Cadastrar(prod);
     }
     
     public Produto Consultar(String nomeProd) {
@@ -93,37 +92,16 @@ public class Produto {
    }
 
     public void Alterar(Produto prod) {
-        ProdDAO prDAO = new ProdDAO();
-        prDAO.Alterar(prod);
+        ProdDAO pDAO = new ProdDAO();
+        pDAO.Alterar(prod);
     }
 
         public void Excluir(String nomeProd) {
-        ProdDAO prDAO = new ProdDAO();
-        prDAO.Excluir(nomeProd);
+        ProdDAO pDAO = new ProdDAO();
+        pDAO.Excluir(nomeProd);
     }
-    
-    public static ArrayList<Pedido> getPedidos(){
-        ArrayList<Pedido> lista = new ArrayList<>();
-        String sql = "SELECT idPedido, Cliente_idCliente, ValorTot, Pagamento FROM Pedido ORDER BY idPedido ";
-        ResultSet rs = Conexao.consultar( sql );
-        if(rs != null){
-            try{
-                while(rs.next() ){
-                    String titulo = rs.getString(2);
-                    String genero = rs.getString(3);
-                    String anoPubli = rs.getString(4);
-                    String elenco = rs.getString(5);
-                    String diretor = rs.getString(6);
-                    String duracao = rs.getString(7);
- //                   Pedido ped = new Pedido(idPedido ,Cliente cliente, Produto produto, valorTot, pagamento);
- //                   ped.setIdProduto(rs.getInt("idPedido"));
- //                   lista.add( pedido );
-                }    
-            }catch(Exception e){  
-            }
-        }
-        return lista;
-    }  
 
+
+ 
     
 }

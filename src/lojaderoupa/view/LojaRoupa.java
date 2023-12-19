@@ -5,6 +5,10 @@
  */
 package lojaderoupa.view;
 
+import javax.swing.JOptionPane;
+import lojaderoupa.controller.ProdController;
+import lojaderoupa.model.Produto;
+
 /**
  *
  * @author 182200155
@@ -188,12 +192,32 @@ public class LojaRoupa extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton3.setText("Cadastrar Produto");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Excluir produto");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Alterar produto");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("Consultar");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setText("produto");
 
@@ -211,7 +235,12 @@ public class LojaRoupa extends javax.swing.JFrame {
 
         jTextField7.setText("jTextField7");
 
-        jButton8.setText("Voltar");
+        jButton8.setText("Limpar");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -251,7 +280,7 @@ public class LojaRoupa extends javax.swing.JFrame {
                             .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addComponent(jButton8)))
-                .addGap(0, 160, Short.MAX_VALUE))
+                .addGap(0, 158, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -561,6 +590,55 @@ public class LojaRoupa extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        String nomeProd = JOptionPane.showInputDialog(null,"Informe o Nome do Produto:");
+        
+        Produto prod = new Produto();
+        
+        ProdController pc = new ProdController();
+        prod = pc.Consultar(nomeProd);
+        
+        if(prod!=null)
+        {
+            jTextField4.requestFocus();
+            jTextField4.setText(prod.getNomeProd());
+            jTextField5.setText(prod.getTamanhoProd());
+            jTextField6.setText(prod.getCategoria().getDescricao());
+            jTextField7.setText(String.valueOf(prod.getValorUnit()));
+        }
+        else
+        {
+            
+            JOptionPane.showMessageDialog(null, "Produto não encontrado!!!");
+        }
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+             String nomeProd = JOptionPane.showInputDialog(null,"Informe o Nome do Produto:");
+            ProdController pc = new ProdController();
+            pc.Excluir(nomeProd);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        ProdController pc = new ProdController();
+//        pc.Alterar(jTextField4.getText(),jTextField5.getText(),jTextField6.getText(),jTextField7.getText(Double.parseDouble()));
+        //como fazer ultimo item
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ProdController pc = new ProdController();
+        pc.Cadastrar(jTextField4.getText(),jTextField5.getText(),jTextField6.getText(),jTextField7.getText());
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+
+            jTextField4.requestFocus();
+            jTextField4.setText("");
+            jTextField5.setText("");
+            jTextField6.setText("");
+            jTextField7.setText("");
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
