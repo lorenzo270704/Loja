@@ -7,6 +7,7 @@ package lojaderoupa.view;
 
 import javax.swing.JOptionPane;
 import lojaderoupa.controller.ProdController;
+import lojaderoupa.model.Categoria;
 import lojaderoupa.model.Produto;
 
 /**
@@ -622,8 +623,9 @@ public class LojaRoupa extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         ProdController pc = new ProdController();
-//        pc.Alterar(jTextField4.getText(),jTextField5.getText(),jTextField6.getText(),jTextField7.getText(Double.parseDouble()));
-        //como fazer ultimo item
+        String preco = jTextField7.getText().toString();
+        Categoria cat = Categoria.valueOf(jTextField6.getText());
+        pc.Alterar(jTextField4.getText(),jTextField5.getText(),Double.parseDouble(preco),cat);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

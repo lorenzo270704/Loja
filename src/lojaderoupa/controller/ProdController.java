@@ -36,10 +36,10 @@ public class ProdController {
         prod.Excluir(nomeProd);
     }
 //Ver com sor, se 'categoria' deve ser mencionada assim ou não
-    public void Alterar(String nomeProd, String TamanhoProd, Double valorUnit, Categoria categoria) {
-      if(!nomeProd.equals("")&&!TamanhoProd.equals("")&&!valorUnit.equals("")&&!categoria.equals(""))
+    public void Alterar(String nomeProd, String TamanhoProd, Double valorUnit, Categoria cat) {
+      if(!nomeProd.equals("")&&!TamanhoProd.equals("")&&!valorUnit.equals("")&&!cat.equals(""))
         {
-           Produto prod = new Produto(nomeProd, TamanhoProd, valorUnit,categoria);
+           Produto prod = new Produto(nomeProd, TamanhoProd, valorUnit,cat);
            prod.Alterar(prod);
         }
     }
